@@ -52,7 +52,7 @@ async def root():
     <!DOCTYPE html>
     <html>
         <head>
-            <title>社員マスターAPI</title>
+            <title>社員マスターAPI_NEW!</title>
             <style>
                 body {
                     font-family: 'Arial', sans-serif;

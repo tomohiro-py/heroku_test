@@ -8,7 +8,7 @@ app = FastAPI(title="社員マスターAPI")
 
 # 社員データのモデル
 class Employee(BaseModel):
-    employee_id: str
+    employee_id: int
     name: str
     department: str
     position: str
@@ -19,7 +19,7 @@ class Employee(BaseModel):
 # サンプルデータ
 employees = [
     Employee(
-        employee_id="EMP001",
+        employee_id=1,
         name="山田 太郎",
         department="営業部",
         position="課長",
@@ -28,7 +28,7 @@ employees = [
         phone="090-1234-5678"
     ),
     Employee(
-        employee_id="EMP002",
+        employee_id=2,
         name="佐藤 花子",
         department="人事部",
         position="主任",
@@ -37,7 +37,7 @@ employees = [
         phone="090-8765-4321"
     ),
     Employee(
-        employee_id="EMP003",
+        employee_id=3,
         name="鈴木 一郎",
         department="開発部",
         position="部長",
@@ -107,7 +107,7 @@ async def get_employees():
     return employees
 
 @app.get("/api/employees/{employee_id}", response_model=Employee)
-async def get_employee(employee_id: str):
+async def get_employee(employee_id: int):
     for employee in employees:
         if employee.employee_id == employee_id:
             return employee

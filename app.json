@@ -1,0 +1,50 @@
+{
+  "name": "FastAPI Employee API",
+  "description": "FastAPIで作られた社員情報管理API🍛",
+  "keywords": [
+    "python",
+    "fastapi",
+    "api",
+    "employee"
+  ],
+  "env": {
+    "ENV": {
+      "description": "実行環境（development, test, production）",
+      "value": "development"
+    }
+  },
+  "scripts": {
+    "test": "pytest",
+    "postdeploy": "python -m pytest"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "pytest"
+      },
+      "env": {
+        "ENV": "test"
+      }
+    },
+    "review": {
+      "scripts": {
+        "postdeploy": "python -m pytest"
+      },
+      "env": {
+        "ENV": "review"
+      }
+    }
+  }
+} 

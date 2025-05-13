@@ -90,7 +90,7 @@ async def root():
         </head>
         <body>
             <div class="container">
-                <h1>✨ 社員マスターAPI ✨</h1>
+                <h1>✨ 社員マスターAPI_FEATURE ✨</h1>
                 <p>以下のエンドポイントが利用可能です：</p>
                 <div class="endpoint">
                     <code>GET /api/employees</code> - 全社員一覧を取得

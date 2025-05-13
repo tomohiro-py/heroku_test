@@ -23,9 +23,28 @@ https://heroku-test-20250513-8a4cf67bc366.herokuapp.com/api/employees/department
 - Python 3.11
 - Heroku
 
+## 🚀 ローカル環境での起動方法
+
+### Linux/Mac
+```bash
+uvicorn main:app --reload
+```
+
+### Windows
+```bash
+python -m uvicorn main:app --reload
+```
+
 ## 🧪 テスト
+
+### Linux/Mac
 ```bash
 pytest
+```
+
+### Windows
+```bash
+python -m pytest
 ```
 
 ## 📝 ライセンス

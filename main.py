@@ -6,6 +6,10 @@ from datetime import date
 
 app = FastAPI(title="社員マスターAPI")
 
+@app.get("/api/hello")
+async def hello():
+    return {"message": "こんにちは！テスト！"} 
+
 # 社員データのモデル
 class Employee(BaseModel):
     employee_id: int
